@@ -54,10 +54,6 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 
-## URLs:
-https://github.com/nathannguyen0102/foodRecipeProject
-https://nathannguyen0102.github.io/foodRecipeProject/
-
 ## SCREENSHOTS
 
 <img src="1.PNG">
