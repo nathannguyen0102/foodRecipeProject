@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="reset" href="./assets/reset.css" />
+    <link rel="shortcut icon" href="./assets/photos/hotpot.png" type="image/x-icon">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              sack: "#957C6A",
+              tomato: "#C41C0C",
+              darktomato: "#AE190C",
+              deepbrown: "#221508",
+              accentdeepbrown: "#36210D",
+            },
+          },
+        },
+
+      };
+    </script>
+    <title>Home</title>
+</head>
+<body>
+  <nav class="bg-slate-50 border-gray-200 px-2 sm:px-4 py-2.5 rounded border-b-2 border-gray-100">
+    <div class="container flex flex-wrap items-center justify-between mx-auto">
+      <a href="index.html" class="flex items-center">
+        <img class="logo w-12 h-12" src="./assets/photos/logo2.png" class="float-left" alt="Logo" />
+        <span class="pl-[7px] self-center text-3xl text-black font-black whitespace-nowrap uppercase
+         transition ease-in-out hover:scale-110 hover:text-tomato duration-300">Savvory</span>
+      </a>
+      <button id="button" data-collapse-toggle="navbar-default" type="button"
+        class="inline-flex items-center p-2 ml-3 text-sm text-black rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200"
+        aria-controls="navbar-default" aria-expanded="false">
+        <span class="sr-only">Open main menu</span>
+        <svg class="w-6 h-6" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20"
+          xmlns="http://www.w3.org/2000/svg">
+          <path fill-rule="evenodd"
+            d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
+            clip-rule="evenodd"></path>
+        </svg>
+      </button>
+      <div class="hidden w-full md:block md:w-auto" id="navbar-default">
+        <ul
+          class="flex flex-col p-4 mt-4 border border-black rounded-lg bg-slate-50 text-black md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium md:bg-slate-100">
+          <li>
+            <a href="search.html"
+              class="block py-2 pl-3 pr-4 text-black rounded uppercase font-black hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-tomato md:p-0"
+              aria-current="page">Search</a>
+          </li>
+          <li>
+            <a href="index.html"
+              class="block py-2 pl-3 pr-4 text-black rounded uppercase font-black md:text-tomato md:p-0">Home</a>
+          </li>
+          <li>
+            <a href="about.html"
+              class="block py-2 pl-3 pr-4 text-black rounded uppercase font-black hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-tomato md:p-0">About</a>
+          </li>
+          <li>
+            <a href="recipes.html"
+              class="block py-2 pl-3 pr-4 text-black rounded uppercase font-black hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-tomato md:p-0">Recipes</a>
+          </li>
+        </ul>
+      </div>
+      <div class="hidden mobile-menu">
+        <ul class="">
+          <li class="active"><a href="search.html"
+              class="block text-sm px-2 py-4 hover:text-white hover:bg-tomato transition duration-300">Search</a></li>
+          <li><a href="index.html" class="block text-sm px-2 py-4 text-white bg-tomato font-semibold">Home</a></li>
+          <li><a href="about.html" class="block text-sm px-2 py-4 hover:text-white hover:bg-tomato transition duration-300">About</a></li>
+          <li><a href="recipes.html" class="block text-sm px-2 py-4 hover:text-white hover:bg-tomato transition duration-300">Recipes</a>
+          </li>
+        </ul>
+      </div>
+      <script>
+        const button = document.querySelector("#button");
+        const menu = document.querySelector(".mobile-menu");
+
+        button.addEventListener("click", () => {
+          menu.classList.toggle("hidden");
+        });
+      </script>
+    </nav>
+
+
+<!-- background container (need to add buttons inside) -->
+    <div class="w-full h-[40em] flex justify-center items-center bg-cover bg-center" 
+    style="background-image: url(./assets/photos/landing.png);">
+      <div class="bg-stone-500 bg-opacity-70 w-full h-[40em] relative z-0">
+        <!-- <p class="italic text-bold bd-red-100 font-serif"></p> -->
+        <div class="absolute inset-0 flex flex-col justify-center items-center z-10 pt-[1em]">
+          <h1 class="text-6xl max-w-md font-bold text-white uppercase p-7 text-center tracking-wide">All in One Recipe Generator</h1>
+          <p class="text-xl text-white italic pb-4 lowercase">Feeling Hungry?</p>
+          <a href="search.html" class="p-7 bg-tomato transition ease-in-out hover:bg-darktomato duration-300 text-white py-4 px-6 border 
+          border-darktomato rounded shadow uppercase font-black">Get Started</a>
+        </div>
+      </div>
+    </div>
+
+
+
+
+    <div class="grid block justify-items-center lg:grid-cols-3 gap-4 p-7">
+      <!-- search -->
+      <div class="max-w-sm bg-white border border-gray-200 rounded-lg shadow-md">
+        <a href="search.html">
+          <img src="./assets/photos/searchbutton.jpg" class="mx-auto w-[300px] rounded-t-lg">
+        </a>
+        <div class="p-5">
+          <h5 class="mb-2 text-2xl text-left font-bold tracking-tight text-black uppercase text-center hover:tx-tomato transition transition ease-in-out hover:scale-110 hover:text-tomato duration-300 cursor-pointer" id="name1">search</h5>
+          <p class="pt-[1em] text-md lowercase text-center">upon clicking 'get started' or 'search' above, you will be brought to a search page where you can enter any recipe</p>
+        </div>
+      </div>
+      <!-- enter -->
+      <div class="max-w-sm bg-white border border-gray-200 rounded-lg shadow-md">
+        <a href="search.html">
+          <img src="./assets/photos/enter.png" class="mx-auto w-[300px] rounded-t-lg">
+        </a>
+        <div class="p-5">
+          <h5 class="mb-2 text-2xl text-left font-bold tracking-tight text-black uppercase text-center transition ease-in-out hover:scale-110 hover:text-tomato duration-300 cursor-pointer" id="name2">enter</h5>
+          <p class="pt-[1em] text-md lowercase text-center">Upon entering a desired recipe, click the search button to begin the search process</p>
+        </a>
+        </div>
+      </div>
+      <!-- randomize -->
+      <div class="max-w-sm bg-white border border-gray-200 rounded-lg shadow-md">
+        <a href="recipes.html">
+          <img src="./assets/photos/randomize.jpg" class="mx-auto w-[300px] rounded-t-lg">
+        </a>
+        <div class="p-5">
+          <h5 class="mb-2 text-2xl text-left font-bold tracking-tight text-black uppercase text-center transition ease-in-out hover:scale-110 hover:text-tomato duration-300 cursor-pointer" id="name4">randomize</h5>
+          <p class="pt-[1em] text-md lowercase text-center">Upon clicking 'recipe' above, a page with 8 randomized recipes will load. Click on any to access it's recipe</p>
+        </a>
+        </div>
+      </div>
+    </div>
+</body>
+</html>
